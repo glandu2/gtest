@@ -962,6 +962,16 @@ using ::std::tuple_size;
 
 #endif  // _MSC_VER
 
+#ifdef __GNUC__
+
+# if GTEST_LINKED_AS_SHARED_LIBRARY
+#  define GTEST_API_ __attribute__ ((visibility ("default")))
+# elif GTEST_CREATE_SHARED_LIBRARY
+#  define GTEST_API_ __attribute__ ((visibility ("default")))
+# endif
+
+#endif  // __GNUC__
+
 #ifndef GTEST_API_
 # define GTEST_API_
 #endif

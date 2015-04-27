@@ -55,6 +55,7 @@
 #include <ostream>
 #include <vector>
 
+#include "global.h"
 #include "gtest/internal/gtest-internal.h"
 #include "gtest/internal/gtest-string.h"
 #include "gtest/gtest-death-test.h"

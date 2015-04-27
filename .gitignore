@@ -6,7 +6,6 @@ x64/
 build*/
 bin*/
 obj*/
-internal*/
 .kdev4/
 
 *.ilk

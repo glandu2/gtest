@@ -8,6 +8,6 @@ if(BUILD_SHARED_LIBS)
 endif()
 
 set(GTEST_INCLUDE "${CMAKE_CURRENT_LIST_DIR}/include" CACHE STRING "gtest include directory")
-include_directories("${CMAKE_CURRENT_LIST_DIR}/include")
-include_directories("${CMAKE_CURRENT_LIST_DIR}/")
+include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
+include_directories(${CMAKE_CURRENT_LIST_DIR}/)
 add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/src" src)

@@ -20,10 +20,24 @@ set(SOURCE_FILES
   ../include/gtest/gtest-spi.h
   ../include/gtest/gtest-test-part.h
   ../include/gtest/gtest-typed-test.h
+  ../include/gtest/internal/gtest-death-test-internal.h
+  ../include/gtest/internal/gtest-filepath.h
+  ../include/gtest/internal/gtest-internal.h
+  ../include/gtest/internal/gtest-linked_ptr.h
+  ../include/gtest/internal/gtest-param-util-generated.h
+  ../include/gtest/internal/gtest-param-util-generated.h.pump
+  ../include/gtest/internal/gtest-param-util.h
+  ../include/gtest/internal/gtest-port.h
+  ../include/gtest/internal/gtest-string.h
+  ../include/gtest/internal/gtest-tuple.h
+  ../include/gtest/internal/gtest-tuple.h.pump
+  ../include/gtest/internal/gtest-type-util.h
+  ../include/gtest/internal/gtest-type-util.h.pump
 )
 
 add_library(${TARGET_NAME} ${SOURCE_FILES})
 target_include_directories(${TARGET_NAME} PUBLIC "../include" PRIVATE "../")
+
 if(BUILD_SHARED_LIBS)
   target_compile_definitions(${TARGET_NAME}
     PRIVATE GTEST_CREATE_SHARED_LIBRARY

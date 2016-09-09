@@ -939,7 +939,7 @@ using ::std::tuple_size;
 
 # if defined(_MSC_VER) || defined(__BORLANDC__)
 // These two compilers are known to support SEH.
-#  define GTEST_HAS_SEH 1
+#  define GTEST_HAS_SEH 0
 # else
 // Assume no SEH.
 #  define GTEST_HAS_SEH 0
